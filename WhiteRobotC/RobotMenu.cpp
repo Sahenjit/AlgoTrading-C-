@@ -53,7 +53,7 @@ void RobotMenu::readLine(string& description) {
 // Test if the data file is correct and display content
 void RobotMenu::testData() {
 	WhiteRobot robot;
-	robot.loadData("index_data.csv");
+	robot.loadData("/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/index_data.csv");
 	clearConsole();
 	cout << "****************************************************************************" << endl;
 	cout << "			Test and print the data from the CSV File " << endl;
@@ -109,14 +109,14 @@ void RobotMenu::executeWhite () {
 	cin >> stopLoss;
 
 
-	cout << "Please enter the initial cash invesment (Example:1000) " << endl;
+	cout << "Please enter the initial cash investment (Example:1000) " << endl;
 	cin >> intialCash;
 	
 
 	WhiteRobot robot(maPointsS_long, maPointsM_long, maPointsL_long, slopeMin_long, mode_long, maPointsS_short, maPointsM_short, maPointsL_short, slopeMin_short, mode_short, slopePoints, stopLoss);
 
-	robot.loadData("index_data.csv");
-	robot.whiteStrategy(intialCash);
+	robot.loadData("/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/index_data.csv");
+	robot.RunStrategy(intialCash);
 	robot.printResults();
 	robot.saveSimulation("simulations.csv");
 	robot.saveSimulationData("portfolio_simulation.csv");
@@ -127,7 +127,7 @@ void RobotMenu::executeWhite () {
 
 
 // Execute a series of random White Robots
-void RobotMenu::radomWhite() {
+void RobotMenu::randomWhite() {
 
 	int max_maPointsS_long, max_maPointsM_long, max_maPointsL_long, max_maPointsS_short, max_maPointsM_short, max_maPointsL_short;
 	double max_slopeMin_long, max_slopeMin_short;
@@ -219,7 +219,7 @@ void RobotMenu::radomWhite() {
 		stopLoss = floor((generator_stopLoss(rng) * 10000) + .5) / 10000;
 		
 		robot.setParameters(maPointsS_long, maPointsM_long, maPointsL_long, slopeMin_long, mode_long, maPointsS_short, maPointsM_short, maPointsL_short, slopeMin_short, mode_short, slopePoints, stopLoss);
-		robot.whiteStrategy(intialCash);
+		robot.RunStrategy(intialCash);
 		robot.saveSimulation("simulations.csv");
 
 		if ((i + 1) % 100 == 0) {
@@ -233,7 +233,7 @@ void RobotMenu::radomWhite() {
 
 
 // Execute a series of random White Robots with parameters in closed intervals
-void RobotMenu::closedRadomWhite() {
+void RobotMenu::closedRandomWhite() {
 
 	int min_maPointsS_long, min_maPointsM_long, min_maPointsL_long, min_maPointsS_short, min_maPointsM_short, min_maPointsL_short;
 	int max_maPointsS_long, max_maPointsM_long, max_maPointsL_long, max_maPointsS_short, max_maPointsM_short, max_maPointsL_short;
@@ -345,7 +345,7 @@ void RobotMenu::closedRadomWhite() {
 		stopLoss = floor((generator_stopLoss(rng) * 10000) + .5) / 10000;
 
 		robot.setParameters(maPointsS_long, maPointsM_long, maPointsL_long, slopeMin_long, mode_long, maPointsS_short, maPointsM_short, maPointsL_short, slopeMin_short, mode_short, slopePoints, stopLoss);
-		robot.whiteStrategy(intialCash);
+		robot.RunStrategy(intialCash);
 		robot.saveSimulation("simulations.csv");
 
 		if ((i + 1) % 100 == 0) {
@@ -359,7 +359,7 @@ void RobotMenu::closedRadomWhite() {
 
 
 // Execute a series of random White Robots with parameters in closed intervals and Fixed state machine
-void RobotMenu::FixedBrainRadomWhite() {
+void RobotMenu::FixedBrainRandomWhite() {
 
 	int min_maPointsS_long, min_maPointsM_long, min_maPointsL_long, min_maPointsS_short, min_maPointsM_short, min_maPointsL_short, mode_long;
 	int max_maPointsS_long, max_maPointsM_long, max_maPointsL_long, max_maPointsS_short, max_maPointsM_short, max_maPointsL_short, mode_short;
@@ -473,7 +473,7 @@ void RobotMenu::FixedBrainRadomWhite() {
 		stopLoss = floor((generator_stopLoss(rng) * 10000) + .5) / 10000;
 
 		robot.setParameters(maPointsS_long, maPointsM_long, maPointsL_long, slopeMin_long, mode_long, maPointsS_short, maPointsM_short, maPointsL_short, slopeMin_short, mode_short, slopePoints, stopLoss);
-		robot.whiteStrategy(intialCash);
+		robot.RunStrategy(intialCash);
 		robot.saveSimulation("simulations.csv");
 
 		if ((i + 1) % 100 == 0) {
@@ -485,7 +485,7 @@ void RobotMenu::FixedBrainRadomWhite() {
 
 }
 
-//Main menu for accesing White Robot program 
+//Main menu for accessing White Robot program
 void RobotMenu::mainMenu() {
 
 	int option = 9;
@@ -512,13 +512,13 @@ void RobotMenu::mainMenu() {
 			executeWhite();
 		}
 		else if (option == 3) {
-			radomWhite();
+			randomWhite();
 		}
 		else if (option == 4) {
-			closedRadomWhite();
+			closedRandomWhite();
 		}
 		else if (option == 5) {
-			FixedBrainRadomWhite();
+			FixedBrainRandomWhite();
 		}
 		else if (option == 0) {
 			cout << endl << "Thank you for using the White Robot, have a nice day. " << endl << endl;
