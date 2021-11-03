@@ -10,16 +10,8 @@ add_executable(WhiteRobotC
         RobotMenu.h
         Signal_Generator.cpp
         Signal_Generator.h
-<<<<<<< Updated upstream
-        WhiteStrategy.cpp
-        WhiteStrategy.h
-        WhiteRobot.cpp
-        WhiteRobot.h
-        WhiteRobotC.cpp)
-=======
         WhiteRobot.cpp
         WhiteRobot.h
         WhiteRobotC.cpp
         WhiteStrategy.cpp
         WhiteStrategy.h)
->>>>>>> Stashed changes

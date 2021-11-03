@@ -103,28 +103,9 @@ CMakeFiles/WhiteRobotC.dir/Signal_Generator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WhiteRobotC.dir/Signal_Generator.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/Signal_Generator.cpp -o CMakeFiles/WhiteRobotC.dir/Signal_Generator.cpp.s
 
-<<<<<<< Updated upstream
-CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.o: CMakeFiles/WhiteRobotC.dir/flags.make
-CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.o: ../WhiteStrategy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.o -c /Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/WhiteStrategy.cpp
-
-CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/WhiteStrategy.cpp > CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.i
-
-CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/WhiteStrategy.cpp -o CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.s
-
-CMakeFiles/WhiteRobotC.dir/WhiteRobot.cpp.o: CMakeFiles/WhiteRobotC.dir/flags.make
-CMakeFiles/WhiteRobotC.dir/WhiteRobot.cpp.o: ../WhiteRobot.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/WhiteRobotC.dir/WhiteRobot.cpp.o"
-=======
 CMakeFiles/WhiteRobotC.dir/WhiteRobot.cpp.o: CMakeFiles/WhiteRobotC.dir/flags.make
 CMakeFiles/WhiteRobotC.dir/WhiteRobot.cpp.o: ../WhiteRobot.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/WhiteRobotC.dir/WhiteRobot.cpp.o"
->>>>>>> Stashed changes
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WhiteRobotC.dir/WhiteRobot.cpp.o -c /Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/WhiteRobot.cpp
 
 CMakeFiles/WhiteRobotC.dir/WhiteRobot.cpp.i: cmake_force
@@ -137,11 +118,7 @@ CMakeFiles/WhiteRobotC.dir/WhiteRobot.cpp.s: cmake_force
 
 CMakeFiles/WhiteRobotC.dir/WhiteRobotC.cpp.o: CMakeFiles/WhiteRobotC.dir/flags.make
 CMakeFiles/WhiteRobotC.dir/WhiteRobotC.cpp.o: ../WhiteRobotC.cpp
-<<<<<<< Updated upstream
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/WhiteRobotC.dir/WhiteRobotC.cpp.o"
-=======
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/WhiteRobotC.dir/WhiteRobotC.cpp.o"
->>>>>>> Stashed changes
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WhiteRobotC.dir/WhiteRobotC.cpp.o -c /Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/WhiteRobotC.cpp
 
 CMakeFiles/WhiteRobotC.dir/WhiteRobotC.cpp.i: cmake_force
@@ -152,8 +129,6 @@ CMakeFiles/WhiteRobotC.dir/WhiteRobotC.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WhiteRobotC.dir/WhiteRobotC.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/WhiteRobotC.cpp -o CMakeFiles/WhiteRobotC.dir/WhiteRobotC.cpp.s
 
-<<<<<<< Updated upstream
-=======
 CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.o: CMakeFiles/WhiteRobotC.dir/flags.make
 CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.o: ../WhiteStrategy.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.o"
@@ -167,35 +142,22 @@ CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/WhiteStrategy.cpp -o CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.s
 
->>>>>>> Stashed changes
 # Object files for target WhiteRobotC
 WhiteRobotC_OBJECTS = \
 "CMakeFiles/WhiteRobotC.dir/RobotMenu.cpp.o" \
 "CMakeFiles/WhiteRobotC.dir/Signal_Generator.cpp.o" \
-<<<<<<< Updated upstream
-"CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.o" \
-"CMakeFiles/WhiteRobotC.dir/WhiteRobot.cpp.o" \
-"CMakeFiles/WhiteRobotC.dir/WhiteRobotC.cpp.o"
-=======
 "CMakeFiles/WhiteRobotC.dir/WhiteRobot.cpp.o" \
 "CMakeFiles/WhiteRobotC.dir/WhiteRobotC.cpp.o" \
 "CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.o"
->>>>>>> Stashed changes
 
 # External object files for target WhiteRobotC
 WhiteRobotC_EXTERNAL_OBJECTS =
 
 WhiteRobotC: CMakeFiles/WhiteRobotC.dir/RobotMenu.cpp.o
 WhiteRobotC: CMakeFiles/WhiteRobotC.dir/Signal_Generator.cpp.o
-<<<<<<< Updated upstream
-WhiteRobotC: CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.o
-WhiteRobotC: CMakeFiles/WhiteRobotC.dir/WhiteRobot.cpp.o
-WhiteRobotC: CMakeFiles/WhiteRobotC.dir/WhiteRobotC.cpp.o
-=======
 WhiteRobotC: CMakeFiles/WhiteRobotC.dir/WhiteRobot.cpp.o
 WhiteRobotC: CMakeFiles/WhiteRobotC.dir/WhiteRobotC.cpp.o
 WhiteRobotC: CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.o
->>>>>>> Stashed changes
 WhiteRobotC: CMakeFiles/WhiteRobotC.dir/build.make
 WhiteRobotC: CMakeFiles/WhiteRobotC.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable WhiteRobotC"

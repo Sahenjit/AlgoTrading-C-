@@ -115,16 +115,6 @@ void RobotMenu::executeWhite () {
     cout<<"Enter End Date or N/A"<<endl;
     getline(cin>>ws,EndDate);
 
-<<<<<<< Updated upstream
-	cout << "Please enter the initial cash investment (Example:1000) " << endl;
-	cin >> intialCash;
-	
-
-	WhiteRobot robot(maPointsS_long, maPointsM_long, maPointsL_long, slopeMin_long, mode_long, maPointsS_short, maPointsM_short, maPointsL_short, slopeMin_short, mode_short, slopePoints, stopLoss);
-
-	robot.loadData("/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/index_data.csv");
-	robot.RunStrategy(intialCash);
-=======
 
 	cout << "Please enter the initial cash investment (Example:1000) " << endl;
 	cin >> initialCash;
@@ -139,7 +129,6 @@ void RobotMenu::executeWhite () {
         robot.loadData("/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/index_data.csv");
     }
 	robot.RunStrategy(initialCash);
->>>>>>> Stashed changes
 	robot.printResults();
 	robot.saveSimulation("/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/simulations.csv");
 	robot.saveSimulationData("/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/portfolio_simulation.csv");
@@ -243,11 +232,7 @@ void RobotMenu::randomWhite() {
 		
 		robot.setParameters(maPointsS_long, maPointsM_long, maPointsL_long, slopeMin_long, mode_long, maPointsS_short, maPointsM_short, maPointsL_short, slopeMin_short, mode_short, slopePoints, stopLoss);
 		robot.RunStrategy(intialCash);
-<<<<<<< Updated upstream
-		robot.saveSimulation("simulations.csv");
-=======
 		robot.saveSimulation("/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/simulations.csv");
->>>>>>> Stashed changes
 
 		if ((i + 1) % 100 == 0) {
 			cout << "Simulation number: " << i+1 <<endl;
@@ -373,11 +358,7 @@ void RobotMenu::closedRandomWhite() {
 
 		robot.setParameters(maPointsS_long, maPointsM_long, maPointsL_long, slopeMin_long, mode_long, maPointsS_short, maPointsM_short, maPointsL_short, slopeMin_short, mode_short, slopePoints, stopLoss);
 		robot.RunStrategy(intialCash);
-<<<<<<< Updated upstream
-		robot.saveSimulation("simulations.csv");
-=======
 		robot.saveSimulation("/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/simulations.csv");
->>>>>>> Stashed changes
 
 		if ((i + 1) % 100 == 0) {
 			cout << "Simulation number: " << i + 1 << endl;
@@ -505,11 +486,7 @@ void RobotMenu::FixedBrainRandomWhite() {
 
 		robot.setParameters(maPointsS_long, maPointsM_long, maPointsL_long, slopeMin_long, mode_long, maPointsS_short, maPointsM_short, maPointsL_short, slopeMin_short, mode_short, slopePoints, stopLoss);
 		robot.RunStrategy(intialCash);
-<<<<<<< Updated upstream
-		robot.saveSimulation("simulations.csv");
-=======
 		robot.saveSimulation("/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/simulations.csv");
->>>>>>> Stashed changes
 
 		if ((i + 1) % 100 == 0) {
 			cout << "Simulation number: " << i + 1 << endl;
