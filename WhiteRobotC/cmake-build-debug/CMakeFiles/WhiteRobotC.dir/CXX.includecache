@@ -53,6 +53,11 @@ vector
 -
 numeric
 -
+<<<<<<< Updated upstream
+=======
+chrono
+-
+>>>>>>> Stashed changes
 algorithm
 -
 chrono
@@ -68,10 +73,13 @@ WhiteStrategy.h
 RobotMenu.h
 /Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/RobotMenu.h
 
+<<<<<<< Updated upstream
 /Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/WhiteStrategy.cpp
 WhiteStrategy.h
 /Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/WhiteStrategy.h
 
+=======
+>>>>>>> Stashed changes
 /Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/WhiteStrategy.h
 vector
 -

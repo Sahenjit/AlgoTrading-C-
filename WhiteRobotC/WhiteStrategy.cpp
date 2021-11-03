@@ -33,13 +33,18 @@ int WhiteStrategy::whiteStateMachine(double &last_trade_investment,int &m_state,
                                      std::vector<int> &m_state_signal,std::vector<double> &m_portfolio_value, std::vector<int> &m_stop_loss,
                                      int &m_long_stop_loss, double &m_stopLoss, int &m_short_stop_loss, std::vector<double> &m_prices) {
 
+<<<<<<< Updated upstream
     if (checkStopLoss(last_trade_investment, m_portfolio_value, m_point, m_state,
              m_stop_loss, m_long_stop_loss, m_stopLoss, m_short_stop_loss, m_prices)) {
+=======
+    if (checkStopLoss(last_trade_investment, m_portfolio_value, m_point, m_state, m_stop_loss, m_long_stop_loss, m_stopLoss, m_short_stop_loss, m_prices)) {
+>>>>>>> Stashed changes
         // Slop loss limit reached in the previous point
         m_state = 1;
     } else if (m_state == 1) {
         if (m_slope[m_point] >= m_slopeMin_long && m_mode_long != 0) {
             //positive trend
+<<<<<<< Updated upstream
             if ((m_ma_small_long[m_point] > m_ma_medium_long[m_point]) &&
             (m_ma_small_long[m_point - 1] < m_ma_medium_long[m_point - 1]) &&
             (m_mode_long == 1 || m_mode_long == 2 || m_mode_long == 3)) {
@@ -55,12 +60,24 @@ int WhiteStrategy::whiteStateMachine(double &last_trade_investment,int &m_state,
             else if ((m_ma_small_long[m_point] > m_ma_medium_long[m_point]) &&
             (m_ma_small_long[m_point - 1] < m_ma_medium_long[m_point - 1]) &&
             (m_mode_long == 6 || m_mode_long == 7 )) {
+=======
+            if ((m_ma_small_long[m_point] > m_ma_medium_long[m_point]) && (m_ma_small_long[m_point - 1] < m_ma_medium_long[m_point - 1]) && (m_mode_long == 1 || m_mode_long == 2 || m_mode_long == 3)) {
+                //S>M  big cycle
+                m_state = 2;
+            }
+            else if ((m_ma_small_long[m_point] > m_ma_large_long[m_point]) && (m_ma_small_long[m_point - 1] < m_ma_large_long[m_point - 1]) && (m_mode_long == 4 || m_mode_long == 5 )) {
+                //S>L
+                m_state = 3;
+            }
+            else if ((m_ma_small_long[m_point] > m_ma_medium_long[m_point]) && (m_ma_small_long[m_point - 1] < m_ma_medium_long[m_point - 1]) && (m_mode_long == 6 || m_mode_long == 7 )) {
+>>>>>>> Stashed changes
                 //S>M small cycle
                 m_state = 4;
             }
         }
         else if (m_slope[m_point] < -m_slopeMin_short && m_mode_long != 0) {
             //negative trend
+<<<<<<< Updated upstream
             if ((m_ma_small_short[m_point] < m_ma_medium_short[m_point]) &&
             (m_ma_small_short[m_point - 1] > m_ma_medium_short[m_point - 1]) &&
             (m_mode_short == 1 || m_mode_short == 2 || m_mode_short == 3)) {
@@ -76,12 +93,24 @@ int WhiteStrategy::whiteStateMachine(double &last_trade_investment,int &m_state,
             else if ((m_ma_small_short[m_point] < m_ma_medium_short[m_point]) &&
             (m_ma_small_short[m_point - 1] > m_ma_medium_short[m_point - 1]) &&
             (m_mode_short == 6 || m_mode_short == 7)) {
+=======
+            if ((m_ma_small_short[m_point] < m_ma_medium_short[m_point]) && (m_ma_small_short[m_point - 1] > m_ma_medium_short[m_point - 1]) && (m_mode_short == 1 || m_mode_short == 2 || m_mode_short == 3)) {
+                //S<M big cycle
+                m_state = 5;
+            }
+            else if ((m_ma_small_short[m_point] < m_ma_large_short[m_point]) && (m_ma_small_short[m_point - 1] > m_ma_large_short[m_point - 1]) && (m_mode_short == 4 || m_mode_short == 5)) {
+                //S<L
+                m_state = 6;
+            }
+            else if ((m_ma_small_short[m_point] < m_ma_medium_short[m_point]) && (m_ma_small_short[m_point - 1] > m_ma_medium_short[m_point - 1]) && (m_mode_short == 6 || m_mode_short == 7)) {
+>>>>>>> Stashed changes
                 //S<M small cycle
                 m_state = 7;
             }
         }
     }
     else if (m_state == 2) {
+<<<<<<< Updated upstream
         if ((m_ma_small_long[m_point] > m_ma_large_long[m_point]) &&
         (m_ma_small_long[m_point - 1] < m_ma_large_long[m_point - 1]) &&
         (m_mode_long == 1 || m_mode_long == 2)) {
@@ -91,11 +120,19 @@ int WhiteStrategy::whiteStateMachine(double &last_trade_investment,int &m_state,
         else if ((m_ma_small_long[m_point] > m_ma_large_long[m_point]) &&
         (m_ma_small_long[m_point - 1] < m_ma_large_long[m_point - 1]) &&
         (m_mode_long == 3)) {
+=======
+        if ((m_ma_small_long[m_point] > m_ma_large_long[m_point]) && (m_ma_small_long[m_point - 1] < m_ma_large_long[m_point - 1]) && (m_mode_long == 1 || m_mode_long == 2)) {
+            //S>L big cycle
+            m_state = 3;
+        }
+        else if ((m_ma_small_long[m_point] > m_ma_large_long[m_point]) && (m_ma_small_long[m_point - 1] < m_ma_large_long[m_point - 1]) && (m_mode_long == 3)) {
+>>>>>>> Stashed changes
             //S>L medium cycle
             m_state = 4;
         }
     }
     else if (m_state == 3) {
+<<<<<<< Updated upstream
         if ((m_ma_small_long[m_point] < m_ma_medium_long[m_point]) &&
         (m_ma_small_long[m_point - 1] > m_ma_medium_long[m_point - 1]) &&
         (m_mode_long == 1 || m_mode_long == 5)) {
@@ -105,11 +142,19 @@ int WhiteStrategy::whiteStateMachine(double &last_trade_investment,int &m_state,
         else if ((m_ma_small_long[m_point] < m_ma_large_long[m_point]) &&
         (m_ma_small_long[m_point - 1] > m_ma_large_long[m_point - 1]) &&
         (m_mode_long == 2 || m_mode_long == 4)) {
+=======
+        if ((m_ma_small_long[m_point] < m_ma_medium_long[m_point]) && (m_ma_small_long[m_point - 1] > m_ma_medium_long[m_point - 1]) && (m_mode_long == 1 || m_mode_long == 5)) {
+            //S<M
+            m_state = 4;
+        }
+        else if ((m_ma_small_long[m_point] < m_ma_large_long[m_point]) && (m_ma_small_long[m_point - 1] > m_ma_large_long[m_point - 1]) && (m_mode_long == 2 || m_mode_long == 4)) {
+>>>>>>> Stashed changes
             //S<L
             m_state = 1;
         }
     }
     else if (m_state == 4) {
+<<<<<<< Updated upstream
         if ((m_ma_small_long[m_point] < m_ma_large_long[m_point]) &&
         (m_ma_small_long[m_point - 1] > m_ma_large_long[m_point - 1]) &&
         (m_mode_long == 1 || m_mode_long == 3 || m_mode_long == 5 || m_mode_long == 6 )) {
@@ -119,11 +164,19 @@ int WhiteStrategy::whiteStateMachine(double &last_trade_investment,int &m_state,
         if ((m_ma_small_long[m_point] < m_ma_medium_long[m_point]) &&
         (m_ma_small_long[m_point - 1] > m_ma_medium_long[m_point - 1]) &&
         (m_mode_long == 7)) {
+=======
+        if ((m_ma_small_long[m_point] < m_ma_large_long[m_point]) && (m_ma_small_long[m_point - 1] > m_ma_large_long[m_point - 1]) && (m_mode_long == 1 || m_mode_long == 3 || m_mode_long == 5 || m_mode_long == 6 )) {
+            //S<L
+            m_state = 1;
+        }
+        if ((m_ma_small_long[m_point] < m_ma_medium_long[m_point]) && (m_ma_small_long[m_point - 1] > m_ma_medium_long[m_point - 1]) && (m_mode_long == 7)) {
+>>>>>>> Stashed changes
             //S<M
             m_state = 1;
         }
     }
     else if (m_state == 5) {
+<<<<<<< Updated upstream
         if ((m_ma_small_short[m_point] < m_ma_large_short[m_point]) &&
         (m_ma_small_short[m_point - 1] > m_ma_large_short[m_point - 1]) &&
         (m_mode_short == 1 || m_mode_short == 2)) {
@@ -133,11 +186,19 @@ int WhiteStrategy::whiteStateMachine(double &last_trade_investment,int &m_state,
         else if ((m_ma_small_short[m_point] < m_ma_large_short[m_point]) &&
         (m_ma_small_short[m_point - 1] > m_ma_large_short[m_point - 1]) &&
         (m_mode_short == 3)) {
+=======
+        if ((m_ma_small_short[m_point] < m_ma_large_short[m_point]) && (m_ma_small_short[m_point - 1] > m_ma_large_short[m_point - 1]) && (m_mode_short == 1 || m_mode_short == 2)) {
+            //S<L big cycle
+            m_state = 6;
+        }
+        else if ((m_ma_small_short[m_point] < m_ma_large_short[m_point]) && (m_ma_small_short[m_point - 1] > m_ma_large_short[m_point - 1]) && (m_mode_short == 3)) {
+>>>>>>> Stashed changes
             //S<L medium cycle
             m_state = 7;
         }
     }
     else if (m_state == 6) {
+<<<<<<< Updated upstream
         if ((m_ma_small_short[m_point] > m_ma_medium_short[m_point]) &&
         (m_ma_small_short[m_point - 1] < m_ma_medium_short[m_point - 1]) &&
         (m_mode_short == 1 || m_mode_short == 5)) {
@@ -147,11 +208,19 @@ int WhiteStrategy::whiteStateMachine(double &last_trade_investment,int &m_state,
         else if ((m_ma_small_short[m_point] > m_ma_large_short[m_point]) &&
         (m_ma_small_short[m_point - 1] < m_ma_large_short[m_point - 1]) &&
         (m_mode_short == 2 || m_mode_short == 4)) {
+=======
+        if ((m_ma_small_short[m_point] > m_ma_medium_short[m_point]) && (m_ma_small_short[m_point - 1] < m_ma_medium_short[m_point - 1]) && (m_mode_short == 1 || m_mode_short == 5)) {
+            //S>M
+            m_state = 7;
+        }
+        else if ((m_ma_small_short[m_point] > m_ma_large_short[m_point]) && (m_ma_small_short[m_point - 1] < m_ma_large_short[m_point - 1]) && (m_mode_short == 2 || m_mode_short == 4)) {
+>>>>>>> Stashed changes
             //S>L
             m_state = 1;
         }
     }
     else if (m_state == 7) {
+<<<<<<< Updated upstream
         if ((m_ma_small_short[m_point] > m_ma_large_short[m_point]) &&
         (m_ma_small_short[m_point - 1] < m_ma_large_short[m_point - 1]) &&
         (m_mode_short == 1 || m_mode_short == 3 || m_mode_short == 5 || m_mode_short == 6)) {
@@ -161,6 +230,13 @@ int WhiteStrategy::whiteStateMachine(double &last_trade_investment,int &m_state,
         else if ((m_ma_small_short[m_point] > m_ma_medium_short[m_point]) &&
         (m_ma_small_short[m_point - 1] < m_ma_medium_short[m_point - 1]) &&
         (m_mode_short == 7)) {
+=======
+        if ((m_ma_small_short[m_point] > m_ma_large_short[m_point]) && (m_ma_small_short[m_point - 1] < m_ma_large_short[m_point - 1]) && (m_mode_short == 1 || m_mode_short == 3 || m_mode_short == 5 || m_mode_short == 6)) {
+            //S>L
+            m_state = 1;
+        }
+        else if ((m_ma_small_short[m_point] > m_ma_medium_short[m_point]) && (m_ma_small_short[m_point - 1] < m_ma_medium_short[m_point - 1]) && (m_mode_short == 7)) {
+>>>>>>> Stashed changes
             //S>M
             m_state = 1;
         }
@@ -252,9 +328,15 @@ double WhiteStrategy::orderAnalyser(double& current_cash, double& last_trade_inv
     }
 
 // Analyses if the stop loss condition has been reached
+<<<<<<< Updated upstream
 bool WhiteStrategy::checkStopLoss(double last_trade_investment,std::vector<double> m_portfolio_value, int m_point, int m_state,
                                   std::vector<int> m_stop_loss, int m_long_stop_loss, double m_stopLoss, int m_short_stop_loss,
                                   std::vector<double> m_prices) {
+=======
+bool WhiteStrategy::checkStopLoss(double &last_trade_investment,std::vector<double> &m_portfolio_value, int &m_point, int &m_state,
+                                  std::vector<int> &m_stop_loss, int &m_long_stop_loss, double &m_stopLoss, int &m_short_stop_loss,
+                                  std::vector<double> &m_prices) {
+>>>>>>> Stashed changes
 
     double current_trade_profit = (m_portfolio_value[m_point-1] - last_trade_investment) / last_trade_investment;
 

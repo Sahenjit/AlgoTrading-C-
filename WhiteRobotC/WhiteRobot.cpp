@@ -120,7 +120,6 @@ vector<string> WhiteRobot::tokenize(string& str, char delim) {
 
 // Load the index data from CSV file
 void WhiteRobot::loadData(string fileName) {
-
 	string line;
 	ifstream myStream(fileName);
 	if (myStream.is_open()) {
@@ -149,6 +148,7 @@ void WhiteRobot::loadData(string fileName) {
 	}
 }
 
+<<<<<<< Updated upstream
 
 // Signal generator function
 void WhiteRobot::generateSignals(vector<double> prices_window) {
@@ -212,9 +212,62 @@ void WhiteRobot::RunStrategy( double intialCash) {
         //	m_ma_small_short.push_back(0.0);
         //	m_ma_medium_short.push_back(0.0);
         //	m_ma_large_short.push_back(0.0);
+=======
+//Load Data based on Time Constraints
+void WhiteRobot:: loadSelectedData(string fileName, string from, string to) {
+    string line;
+    ifstream myStream(fileName);
+    if (myStream.is_open()) {
+        cout << endl << " " << fileName << " successfully opened." << line << endl;
+        getline(myStream, line);
+        cout << "The first line is: " << line << endl;
+
+
+        while (getline(myStream, line)) {
+
+            //Parses the line
+            vector<string> fields = tokenize(line, ',');
+            string time = (fields[0]);
+            double price = stod(fields[1]);
+            if ((strcmp(time.c_str(), from.c_str()) >= 0)) {
+                // Stores the read values
+                if (price > 0) {
+                    m_dates.push_back(fields[0]);
+                    m_prices.push_back(price);
+                }
+            }
+            else if (time == from)
+            {
+                break;
+            }
+        }
+        myStream.close();
+    } else {
+        cout << "There was a problem opening the file: " << fileName << endl;
+    }
+}
+
+
+
+// Signal generator function
+void WhiteRobot::generateSignals(vector<double> prices_window) {
+
+
+	m_ma_small_long.push_back(generate.movingAverage(prices_window, m_maPointsS_long));
+	m_ma_medium_long.push_back(generate.movingAverage(prices_window, m_maPointsM_long));
+	m_ma_large_long.push_back(generate.movingAverage(prices_window, m_maPointsL_long));
+
+	m_ma_small_short.push_back(generate.movingAverage(prices_window, m_maPointsS_short));
+	m_ma_medium_short.push_back(generate.movingAverage(prices_window, m_maPointsM_short));
+	m_ma_large_short.push_back(generate.movingAverage(prices_window, m_maPointsL_short));
+
+	m_slope.push_back(generate.movingSlope(prices_window, m_slopePoints));
+}
+>>>>>>> Stashed changes
 
         //	m_slope.push_back(0.0);
 
+<<<<<<< Updated upstream
         //	m_state_signal.push_back(0);
         //	m_order_signal.push_back(0);
 
@@ -228,13 +281,56 @@ void WhiteRobot::RunStrategy( double intialCash) {
 
         //	++m_point;
 
+=======
+// White strategy backtest implementation
+void WhiteRobot::RunStrategy( double intialCash) {
+    //cout << "Executing White strategy" << endl;
+
+    double current_cash = intialCash;
+    double last_trade_investment = 1;
+    double cfd_units = 0;
+    vector<int> max_vect{m_maPointsS_long, m_maPointsM_long, m_maPointsL_long, m_maPointsS_short, m_maPointsM_short,
+                         m_maPointsL_short, m_slopePoints};
+    int max_window_size = *max_element(max_vect.begin(), max_vect.end());
+
+    if (m_maPointsS_long > 1 && m_maPointsM_long > 1 && m_maPointsL_long > 1 && m_maPointsS_short > 1 &&
+        m_maPointsM_short > 1 && m_maPointsL_short > 1 && m_slopePoints > 1) {
+
+        //Resizes the vectors for dataset entry
+        m_ma_small_long.resize(max_window_size, 0);
+        m_ma_medium_long.resize(max_window_size,0);
+        m_ma_large_long.resize(max_window_size,0);
+
+        m_ma_small_short.resize(max_window_size,0);
+        m_ma_medium_short.resize(max_window_size,0);
+        m_ma_large_short.resize(max_window_size,0);
+
+        m_slope.resize(max_window_size,0);
+
+        m_state_signal.resize(max_window_size,0);
+        m_order_signal.resize(max_window_size,0);
+
+        m_current_cash.resize(max_window_size,intialCash);
+        m_cfd_units.resize(max_window_size,0);
+        m_last_trade_investment.resize(max_window_size,0);
+        m_portfolio_value.resize(max_window_size,intialCash);
+        m_trade_profit.resize(max_window_size,0);
+
+        m_stop_loss.resize(max_window_size,0);
+        m_point = max_window_size;
+>>>>>>> Stashed changes
 
         // Loop over the tradable part of the dataset
         for (auto it = m_prices.begin() + max_window_size; it != m_prices.end(); ++it) {
             vector<double> prices_window;
             prices_window = vector<double>(it - max_window_size + 1, it + 1);
             generateSignals(prices_window);
+<<<<<<< Updated upstream
 
+=======
+            if(m_point==403)
+            {std::cout<<"caught";}
+>>>>>>> Stashed changes
             m_order_signal.push_back(ws.whiteStateMachine(last_trade_investment, m_state, m_slope, m_point, m_slopeMin_long,
                                                           m_mode_long, m_ma_small_long, m_ma_medium_long, m_ma_large_long,
                                                           m_slopeMin_short, m_ma_small_short, m_ma_medium_short,
@@ -245,7 +341,10 @@ void WhiteRobot::RunStrategy( double intialCash) {
                      m_point, m_prices, m_long_trades, m_short_trades, m_long_trades_profit,
                      m_trade_profit, m_good_long_trades, m_short_trades_profit, m_good_short_trades,
                      m_current_cash, m_cfd_units, m_last_trade_investment));
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
             ++m_point;
         }
     } else {
@@ -262,6 +361,7 @@ void WhiteRobot::RunStrategy( double intialCash) {
             m_ma_small_short.push_back(0.0);
             m_ma_medium_short.push_back(0.0);
             m_ma_large_short.push_back(0.0);
+<<<<<<< Updated upstream
 
             m_slope.push_back(0.0);
 
@@ -280,6 +380,28 @@ void WhiteRobot::RunStrategy( double intialCash) {
         }
     }
 }
+=======
+
+            m_slope.push_back(0.0);
+
+            m_state_signal.push_back(0);
+            m_order_signal.push_back(0);
+
+            m_current_cash.push_back(intialCash);
+            m_cfd_units.push_back(0.0);
+            m_last_trade_investment.push_back(0.0);
+            m_portfolio_value.push_back(intialCash);
+            m_trade_profit.push_back(0.0);
+
+            m_stop_loss.push_back(0);
+
+            ++m_point;
+        }
+    }
+}
+
+
+>>>>>>> Stashed changes
 
 
 

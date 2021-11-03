@@ -31,6 +31,7 @@
 #include <fstream>
 #include <vector> 
 #include <numeric>
+#include <chrono>
 #include <algorithm>
 #include <chrono>
 #include <ctime>
@@ -76,6 +77,11 @@ public:
 	vector<string>  tokenize(string& str, char delim);
 
 	void loadData(string fileName);
+<<<<<<< Updated upstream
+=======
+
+	void loadSelectedData(string fileName, string from, string to);
+>>>>>>> Stashed changes
 
 	void generateSignals(vector<double> prices_window);
 

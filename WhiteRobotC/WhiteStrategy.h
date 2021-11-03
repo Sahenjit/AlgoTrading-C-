@@ -21,9 +21,15 @@ public:
                                         int &m_point, std::vector<double> &m_prices, int &m_long_trades, int &m_short_trades, double &m_long_trades_profit,
                                         std::vector<double> &m_trade_profit, int &m_good_long_trades, double &m_short_trades_profit, int &m_good_short_trades,
                                         std::vector<double> &m_current_cash, std::vector<double> &m_cfd_units, std::vector<double> &m_last_trade_investment);
+<<<<<<< Updated upstream
     bool checkStopLoss(double last_trade_investment,std::vector<double> m_portfolio_value, int m_point, int m_state,
                                       std::vector<int> m_stop_loss, int m_long_stop_loss, double m_stopLoss, int m_short_stop_loss,
                                       std::vector<double> m_prices);
+=======
+    bool checkStopLoss(double &last_trade_investment,std::vector<double> &m_portfolio_value, int &m_point, int &m_state,
+                                      std::vector<int> &m_stop_loss, int &m_long_stop_loss, double &m_stopLoss, int &m_short_stop_loss,
+                                      std::vector<double> &m_prices);
+>>>>>>> Stashed changes
     bool trailingStopLoss();
 };
 
