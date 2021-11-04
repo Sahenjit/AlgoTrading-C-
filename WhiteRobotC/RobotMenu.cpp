@@ -110,9 +110,9 @@ void RobotMenu::executeWhite () {
 	cin >> stopLoss;
 
 	cout <<endl<<" Date Parameters:";
-    cout<<endl<< "Enter Starting Date or N/A "<<endl;
+    cout<<endl<< "Enter Starting Date (YYYY-MM-DD HH::MM) or N/A "<<endl;
     getline(cin>>ws,StartDate);
-    cout<<"Enter End Date or N/A"<<endl;
+    cout<<"Enter End Date (YYYY-MM-DD HH::MM) or N/A"<<endl;
     getline(cin>>ws,EndDate);
 
 

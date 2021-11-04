@@ -77,9 +77,22 @@ include CMakeFiles/WhiteRobotC.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/WhiteRobotC.dir/flags.make
 
+CMakeFiles/WhiteRobotC.dir/Date.cpp.o: CMakeFiles/WhiteRobotC.dir/flags.make
+CMakeFiles/WhiteRobotC.dir/Date.cpp.o: ../Date.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/WhiteRobotC.dir/Date.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WhiteRobotC.dir/Date.cpp.o -c /Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/Date.cpp
+
+CMakeFiles/WhiteRobotC.dir/Date.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WhiteRobotC.dir/Date.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/Date.cpp > CMakeFiles/WhiteRobotC.dir/Date.cpp.i
+
+CMakeFiles/WhiteRobotC.dir/Date.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WhiteRobotC.dir/Date.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/Date.cpp -o CMakeFiles/WhiteRobotC.dir/Date.cpp.s
+
 CMakeFiles/WhiteRobotC.dir/RobotMenu.cpp.o: CMakeFiles/WhiteRobotC.dir/flags.make
 CMakeFiles/WhiteRobotC.dir/RobotMenu.cpp.o: ../RobotMenu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/WhiteRobotC.dir/RobotMenu.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/WhiteRobotC.dir/RobotMenu.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WhiteRobotC.dir/RobotMenu.cpp.o -c /Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/RobotMenu.cpp
 
 CMakeFiles/WhiteRobotC.dir/RobotMenu.cpp.i: cmake_force
@@ -92,7 +105,7 @@ CMakeFiles/WhiteRobotC.dir/RobotMenu.cpp.s: cmake_force
 
 CMakeFiles/WhiteRobotC.dir/Signal_Generator.cpp.o: CMakeFiles/WhiteRobotC.dir/flags.make
 CMakeFiles/WhiteRobotC.dir/Signal_Generator.cpp.o: ../Signal_Generator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/WhiteRobotC.dir/Signal_Generator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/WhiteRobotC.dir/Signal_Generator.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WhiteRobotC.dir/Signal_Generator.cpp.o -c /Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/Signal_Generator.cpp
 
 CMakeFiles/WhiteRobotC.dir/Signal_Generator.cpp.i: cmake_force
@@ -105,7 +118,7 @@ CMakeFiles/WhiteRobotC.dir/Signal_Generator.cpp.s: cmake_force
 
 CMakeFiles/WhiteRobotC.dir/WhiteRobot.cpp.o: CMakeFiles/WhiteRobotC.dir/flags.make
 CMakeFiles/WhiteRobotC.dir/WhiteRobot.cpp.o: ../WhiteRobot.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/WhiteRobotC.dir/WhiteRobot.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/WhiteRobotC.dir/WhiteRobot.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WhiteRobotC.dir/WhiteRobot.cpp.o -c /Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/WhiteRobot.cpp
 
 CMakeFiles/WhiteRobotC.dir/WhiteRobot.cpp.i: cmake_force
@@ -118,7 +131,7 @@ CMakeFiles/WhiteRobotC.dir/WhiteRobot.cpp.s: cmake_force
 
 CMakeFiles/WhiteRobotC.dir/WhiteRobotC.cpp.o: CMakeFiles/WhiteRobotC.dir/flags.make
 CMakeFiles/WhiteRobotC.dir/WhiteRobotC.cpp.o: ../WhiteRobotC.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/WhiteRobotC.dir/WhiteRobotC.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/WhiteRobotC.dir/WhiteRobotC.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WhiteRobotC.dir/WhiteRobotC.cpp.o -c /Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/WhiteRobotC.cpp
 
 CMakeFiles/WhiteRobotC.dir/WhiteRobotC.cpp.i: cmake_force
@@ -131,7 +144,7 @@ CMakeFiles/WhiteRobotC.dir/WhiteRobotC.cpp.s: cmake_force
 
 CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.o: CMakeFiles/WhiteRobotC.dir/flags.make
 CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.o: ../WhiteStrategy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.o -c /Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/WhiteStrategy.cpp
 
 CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.i: cmake_force
@@ -144,6 +157,7 @@ CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.s: cmake_force
 
 # Object files for target WhiteRobotC
 WhiteRobotC_OBJECTS = \
+"CMakeFiles/WhiteRobotC.dir/Date.cpp.o" \
 "CMakeFiles/WhiteRobotC.dir/RobotMenu.cpp.o" \
 "CMakeFiles/WhiteRobotC.dir/Signal_Generator.cpp.o" \
 "CMakeFiles/WhiteRobotC.dir/WhiteRobot.cpp.o" \
@@ -153,6 +167,7 @@ WhiteRobotC_OBJECTS = \
 # External object files for target WhiteRobotC
 WhiteRobotC_EXTERNAL_OBJECTS =
 
+WhiteRobotC: CMakeFiles/WhiteRobotC.dir/Date.cpp.o
 WhiteRobotC: CMakeFiles/WhiteRobotC.dir/RobotMenu.cpp.o
 WhiteRobotC: CMakeFiles/WhiteRobotC.dir/Signal_Generator.cpp.o
 WhiteRobotC: CMakeFiles/WhiteRobotC.dir/WhiteRobot.cpp.o
@@ -160,7 +175,7 @@ WhiteRobotC: CMakeFiles/WhiteRobotC.dir/WhiteRobotC.cpp.o
 WhiteRobotC: CMakeFiles/WhiteRobotC.dir/WhiteStrategy.cpp.o
 WhiteRobotC: CMakeFiles/WhiteRobotC.dir/build.make
 WhiteRobotC: CMakeFiles/WhiteRobotC.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable WhiteRobotC"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/shankar/Desktop/WhiteRobotC/WhiteRobotC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable WhiteRobotC"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/WhiteRobotC.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

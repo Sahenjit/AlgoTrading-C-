@@ -37,7 +37,7 @@
 #include <ctime>
 #include "Signal_Generator.h"
 #include "WhiteStrategy.h"
-
+#include "Date.h"
 using namespace std;
 
 /****************************************************************************************

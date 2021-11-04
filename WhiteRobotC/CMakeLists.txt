@@ -6,6 +6,8 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(.)
 
 add_executable(WhiteRobotC
+        Date.cpp
+        Date.h
         RobotMenu.cpp
         RobotMenu.h
         Signal_Generator.cpp

@@ -151,6 +151,7 @@ void WhiteRobot::loadData(string fileName) {
 //Load Data based on Time Constraints
 void WhiteRobot:: loadSelectedData(string fileName, string from, string to) {
     string line;
+
     ifstream myStream(fileName);
     if (myStream.is_open()) {
         cout << endl << " " << fileName << " successfully opened." << line << endl;
@@ -162,19 +163,21 @@ void WhiteRobot:: loadSelectedData(string fileName, string from, string to) {
 
             //Parses the line
             vector<string> fields = tokenize(line, ',');
-            string time = (fields[0]);
+            Date d(fields[0]);
+            string time = (d.reformat_date());
             double price = stod(fields[1]);
-            if ((strcmp(time.c_str(), from.c_str()) >= 0)) {
+            if (time == to)
+            {
+                break;
+            }
+            else if (time >= from) {
                 // Stores the read values
                 if (price > 0) {
                     m_dates.push_back(fields[0]);
                     m_prices.push_back(price);
                 }
             }
-            else if (time == from)
-            {
-                break;
-            }
+
         }
         myStream.close();
     } else {
